@@ -40,9 +40,6 @@ public class FileFound {
             while ((line = reader.readLine()) != null) {
                 stringBuilder.append(line).append('\n');
             }
-            if (stringBuilder.length() > 0) {
-                stringBuilder.deleteCharAt(stringBuilder.length() - 1);
-            }
             reader.close();
             text = stringBuilder.toString();
         } catch (IOException e) {

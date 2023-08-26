@@ -22,8 +22,6 @@ public class Property implements Serializable {
     public transient List<Value> values;
 
     public Property(String startChain, String endChain) {
-        //startChain = StringUtils.toWork(startChain);
-        //endChain = StringUtils.toWork(endChain);
         this.startChain = startChain;
         this.endChain = endChain;
         this.values = new ArrayList<>();

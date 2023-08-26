@@ -72,6 +72,7 @@ public class MainFrame extends javax.swing.JFrame {
         tfReplaceValue = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         bSaveReplacementValue = new javax.swing.JButton();
+        labelProp = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         listPropertiesFound = new javax.swing.JList<>();
@@ -88,11 +89,11 @@ public class MainFrame extends javax.swing.JFrame {
         jSplitPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         jSplitPane1.setDividerLocation(410);
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Find properties", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FreeMono", 0, 12))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Find properties", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FreeMono", 0, 12))); // NOI18N
 
         bStartFinding.setBackground(new java.awt.Color(204, 204, 255));
         bStartFinding.setForeground(new java.awt.Color(51, 51, 51));
-        bStartFinding.setText("Start finding!");
+        bStartFinding.setText("Start analyzing!");
         bStartFinding.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bStartFindingActionPerformed(evt);
@@ -140,9 +141,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,7 +149,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(jLabel3)
                 .addGap(0, 0, 0)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
@@ -177,7 +176,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(jLabel5)
                 .addGap(0, 0, 0)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
@@ -189,11 +188,9 @@ public class MainFrame extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(4, 4, 4)
-                .addComponent(jSplitPane2)
-                .addGap(4, 4, 4))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(4, 4, 4)
-                .addComponent(bSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSplitPane2)
+                    .addComponent(bSave, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(4, 4, 4))
         );
         jPanel2Layout.setVerticalGroup(
@@ -244,7 +241,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Value -> Replacement", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FreeMono", 0, 12))); // NOI18N
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "val -> replacement", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FreeMono", 0, 12))); // NOI18N
 
         listValues.setFont(new java.awt.Font("FreeMono", 0, 14)); // NOI18N
         listValues.setForeground(new java.awt.Color(0, 0, 0));
@@ -277,7 +274,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         bSaveReplacementValue.setBackground(new java.awt.Color(204, 255, 204));
         bSaveReplacementValue.setForeground(new java.awt.Color(51, 51, 51));
-        bSaveReplacementValue.setText("Save");
+        bSaveReplacementValue.setText("Set replacement");
         bSaveReplacementValue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bSaveReplacementValueActionPerformed(evt);
@@ -292,7 +289,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(4, 4, 4)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tfReplaceValue)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                     .addComponent(bSaveReplacementValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(4, 4, 4))
         );
@@ -308,6 +305,10 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(4, 4, 4))
         );
 
+        labelProp.setFont(new java.awt.Font("sansserif", 0, 10)); // NOI18N
+        labelProp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelProp.setText("selected property");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -318,18 +319,23 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(2, 2, 2))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelProp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(2, 2, 2)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE)
+                .addComponent(labelProp)
+                .addGap(0, 0, 0)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
                 .addGap(2, 2, 2)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4))
         );
 
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Properties", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FreeMono", 0, 12))); // NOI18N
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Properties", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FreeMono", 0, 12))); // NOI18N
 
         listPropertiesFound.setFont(new java.awt.Font("FreeMono", 0, 18)); // NOI18N
         listPropertiesFound.setForeground(new java.awt.Color(0, 0, 0));
@@ -352,7 +358,7 @@ public class MainFrame extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(2, 2, 2)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
                 .addGap(2, 2, 2))
         );
         jPanel7Layout.setVerticalGroup(
@@ -426,7 +432,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelProgress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
+                    .addComponent(jSplitPane1)
                     .addComponent(tfRootPath, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -622,6 +628,9 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void listPropertiesFoundValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_listPropertiesFoundValueChanged
         setupValuesList();
+        if (listPropertiesFound.getSelectedIndex() >= 0) {
+            labelProp.setText(propertyInspector.propertyList.get(listPropertiesFound.getSelectedIndex()).toString());
+        }
     }//GEN-LAST:event_listPropertiesFoundValueChanged
 
     void setupPropertiesFindList() {
@@ -722,6 +731,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JSplitPane jSplitPane2;
     private javax.swing.JSplitPane jSplitPane3;
     private javax.swing.JLabel labelProgress;
+    private javax.swing.JLabel labelProp;
     private javax.swing.JList<String> listPropertiesFind;
     private javax.swing.JList<String> listPropertiesFound;
     private javax.swing.JList<String> listValues;

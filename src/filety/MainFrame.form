@@ -43,7 +43,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="labelProgress" max="32767" attributes="0"/>
-                      <Component id="jSplitPane1" alignment="0" pref="760" max="32767" attributes="0"/>
+                      <Component id="jSplitPane1" alignment="0" max="32767" attributes="0"/>
                       <Component id="tfRootPath" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -102,7 +102,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Find properties">
+                    <TitledBorder justification="2" title="Find properties">
                       <Font PropertyName="font" name="FreeMono" size="12" style="0"/>
                     </TitledBorder>
                   </Border>
@@ -150,7 +150,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Start finding!"/>
+                    <Property name="text" type="java.lang.String" value="Start analyzing!"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bStartFindingActionPerformed"/>
@@ -215,15 +215,13 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                  <Component id="jSplitPane2" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                  <Component id="bSave" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jSplitPane2" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="bSave" alignment="1" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -272,10 +270,7 @@
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel3" max="32767" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="jScrollPane4" pref="0" max="32767" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="jScrollPane4" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
@@ -284,7 +279,7 @@
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                           <Component id="jLabel3" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="jScrollPane4" pref="122" max="32767" attributes="0"/>
+                                          <Component id="jScrollPane4" pref="117" max="32767" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -337,7 +332,7 @@
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                           <Component id="jLabel5" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="jScrollPane5" pref="122" max="32767" attributes="0"/>
+                                          <Component id="jScrollPane5" pref="117" max="32767" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -398,8 +393,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="bStartReplacing" alignment="1" max="32767" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
+                              <Component id="bStartReplacing" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
                                   <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                   <Component id="jPanel6" max="32767" attributes="0"/>
@@ -443,7 +438,7 @@
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="Value -&gt; Replacement">
+                        <TitledBorder justification="2" title="val -&gt; replacement">
                           <Font PropertyName="font" name="FreeMono" size="12" style="0"/>
                         </TitledBorder>
                       </Border>
@@ -461,13 +456,19 @@
                               </Group>
                               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="labelProp" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                              <Component id="jScrollPane3" pref="306" max="32767" attributes="0"/>
+                              <Component id="labelProp" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                              <Component id="jScrollPane3" pref="289" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                               <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
@@ -520,7 +521,7 @@
                                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="tfReplaceValue" max="32767" attributes="0"/>
-                                      <Component id="jLabel6" max="32767" attributes="0"/>
+                                      <Component id="jLabel6" pref="215" max="32767" attributes="0"/>
                                       <Component id="bSaveReplacementValue" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
@@ -566,7 +567,7 @@
                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="33" green="33" red="33" type="rgb"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Save"/>
+                            <Property name="text" type="java.lang.String" value="Set replacement"/>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bSaveReplacementValueActionPerformed"/>
@@ -574,13 +575,22 @@
                         </Component>
                       </SubComponents>
                     </Container>
+                    <Component class="javax.swing.JLabel" name="labelProp">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="sansserif" size="10" style="0"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="selected property"/>
+                      </Properties>
+                    </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel7">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="Properties">
+                        <TitledBorder justification="2" title="Properties">
                           <Font PropertyName="font" name="FreeMono" size="12" style="0"/>
                         </TitledBorder>
                       </Border>
@@ -592,7 +602,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                              <Component id="jScrollPane2" pref="88" max="32767" attributes="0"/>
+                              <Component id="jScrollPane2" pref="74" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
