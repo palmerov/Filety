@@ -52,6 +52,10 @@ public class Value implements Comparable<Object>, Serializable {
         return label +" "+ value + " -> " + replacement;
     }
 
+    public List<FileFound> getFileFoundList() {
+        return fileFoundList;
+    }
+    
     @Override
     public int compareTo(Object t) {
         if (t instanceof Value) {

@@ -7,6 +7,7 @@ package filety;
 import filety.data.Property;
 import filety.data.PropertyEditor;
 import filety.data.StringUtils;
+import filety.data.Value;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.io.File;
@@ -245,6 +246,16 @@ public class MainFrame extends javax.swing.JFrame {
 
         listValues.setFont(new java.awt.Font("FreeMono", 0, 14)); // NOI18N
         listValues.setForeground(new java.awt.Color(0, 0, 0));
+        listValues.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                listValuesMouseClicked(evt);
+            }
+        });
+        listValues.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                listValuesKeyReleased(evt);
+            }
+        });
         listValues.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
                 listValuesValueChanged(evt);
@@ -632,6 +643,22 @@ public class MainFrame extends javax.swing.JFrame {
             labelProp.setText(propertyInspector.propertyList.get(listPropertiesFound.getSelectedIndex()).toString());
         }
     }//GEN-LAST:event_listPropertiesFoundValueChanged
+
+    private void listValuesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listValuesMouseClicked
+        if (evt.getClickCount() == 2) {
+            showValueFiles(propertyInspector.propertyList.get(listPropertiesFound.getSelectedIndex()).values.get(listValues.getSelectedIndex()));
+        }
+    }//GEN-LAST:event_listValuesMouseClicked
+
+    private void listValuesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_listValuesKeyReleased
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            showValueFiles(propertyInspector.propertyList.get(listPropertiesFound.getSelectedIndex()).values.get(listValues.getSelectedIndex()));
+        }
+    }//GEN-LAST:event_listValuesKeyReleased
+
+    void showValueFiles(Value value) {
+        new ValueFilesDialog(this, true, value).setVisible(true);
+    }
 
     void setupPropertiesFindList() {
         DefaultListModel defaultListModel = new DefaultListModel();
